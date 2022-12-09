@@ -2,7 +2,7 @@
     session_start();
 
     if(isset($_POST['btnSignInUser'])){
-        require_once('');
+        require_once('open-connection.php');
         if(isset($_POST['utype'])){
             $type = ($_POST['utype']);
             $strtype = implode($type);
@@ -57,7 +57,7 @@
                         echo 'ERROR: Could not execute your request.';
                     }
         }
-        require_once('');
+        require_once('close-connection.php');
         }
     }
 
