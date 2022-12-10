@@ -16,7 +16,7 @@
     <div class="container">
             <div class="row mt-5">
                 <div class="col-10">
-                    <h1><i class="fa fa-store"></i>Stevie Wonder Online Shop</h1>
+                    <h1><i class="fa fa-store"></i> Learn IT Easy Online Shop</h1>
                 </div>      
             </div>
             <hr>
@@ -50,8 +50,8 @@
                                                 <td>'.$recProducts['name'].'</td>
                                                 <td>'.$recProducts['description'].'</td>
                                                 <td class="text-right">'.number_format($recProducts['price']).'</td>
-<td class="text-right"><a href="edit-product.php?k='.$recProducts['id'].'"><button name="update" class="btn btn-sm btn-success" type="button"><i class="fa fa-edit"></i></button></a>
-<td class="text-right"><a href="remove-product.php?k='.$recProducts['id'].'"><button name="remove" class="btn btn-sm btn-danger" type="button"><i class="fa fa-trash"></i></button></a>
+                                                <td class="text-right"><a href="edit-product.php?k='.$recProducts['id'].'"><button name="update" class="btn btn-sm btn-success" type="button"><i class="fa fa-edit"></i></button></a>
+                                                <td class="text-right"><a href="remove-product.php?k='.$recProducts['id'].'"><button name="remove" class="btn btn-sm btn-danger" type="button"><i class="fa fa-trash"></i></button></a>
 
                                             </tr>';
                                             }
