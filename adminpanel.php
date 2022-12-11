@@ -1,5 +1,5 @@
 <?php 
-    session_start(); 
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
     <div class="container">
             <div class="row mt-5">
                 <div class="col-10">
-                    <h1><i class="fa fa-store"></i> Stevie Wonder Online Shop</h1>
+                    <h1><i class="fa fa-store"></i>Stevie Wonder Online Shop</h1>
                 </div>      
             </div>
             <hr>
@@ -26,7 +26,7 @@
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <i class="fa fa-store fa-3x"></i>
+                                    <i class="fa fa-users fa-3x"></i>
                                 </div>
                                 <div class="col-sm-8">
                                 <?php  require ('open-connection.php'); ?>
