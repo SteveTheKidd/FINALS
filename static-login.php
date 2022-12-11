@@ -37,13 +37,17 @@
                 echo 'ERROR: Could not execute your request.';
             }
         }
-        elseif($strtype === 'Customer'){
+        elseif($strtype === 'Costumer'){
             $strSql= "
-                        SELECT * FROM `tbl_customer`WHERE emailaddress = '$username' AND password = '$password' ";
+                        SELECT * FROM tbl_customer
+                        WHERE emailAddress = '$username'
+                        AND password = '$password'
+                    ";
     
                     if($rsCustomer = mysqli_query($con, $strSql)){
-                        if(mysqli_num_rows($rsCustomer) > 0){           
-                            
+                        if(mysqli_num_rows($rsCustomer) > 0){
+            
+                            $_SESSION['log'] = 'yes';
                             header('location:index.php');
                             mysqli_free_result($rsCustomer);
                         }
@@ -59,6 +63,8 @@
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,19 +84,22 @@
             <form class="form-signin" method="post">
             <div class="form-row align-items-center">
             <div class="col-12 my-1">
-            <select name="utype[]"  class="form-control" id="utype">
+                    <select name="utype[]"  class="form-control" id="utype">
                         <option value="Admin">Admin</option>
-                        <option value="Customer">Customer</option>
-            </select>
-          
-            </div>
-                <br>
-                <input type="text" name="txtUserName" id="txtUserName" class="form-control" placeholder="User Name" required>
+                        <option value="Costumer">Costumer</option>
+                    </select><br>
+                        <input type="text" name="txtUserName" id="txtUserName" class="form-control" placeholder="User Name" required>
                         <input type="password" name="txtPassword" id="txtPassword" class="form-control" placeholder="Password" required>                
                         <button name="btnSignInUser" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                    </form>
+                        <a href="change-password.php" class="ForgetPwd" value="Login">Change Password?</a>
+                </div>              
+            </div>
+        </div>
+    </div>
     
-
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js" integrity="sha512-wV7Yj1alIZDqZFCUQJy85VN+qvEIly93fIQAN7iqDFCPEucLCeNFz4r35FCo9s6WrpdDQPi80xbljXB8Bjtvcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
+
