@@ -86,7 +86,7 @@
                     <div class="card text-white bg-warning mb-3">
                     <div class="card-header">
                         <div class="row">
-                        <?php $usernameshow = $_SESSION['user_login']; $userspro = mysqli_query($db_con,"SELECT * FROM `users` WHERE `username`='$usernameshow';"); $userrow=mysqli_fetch_array($userspro); ?>
+                        
                         <div class="col-sm-4">
                             <i class="fa fa-users fa-3x"></i>
                         </div>
